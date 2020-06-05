@@ -7,8 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.nelioalves.cursomc.domain.Categoria;
 import com.nelioalves.cursomc.repositories.CategoriaRepository;
-import com.nelioalves.cursomc.resources.domain.Categoria;
 
 @SpringBootApplication
 public class CursomcApplication implements CommandLineRunner {
