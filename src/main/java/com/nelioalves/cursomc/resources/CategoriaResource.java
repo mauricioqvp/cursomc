@@ -16,7 +16,8 @@ import com.nelioalves.cursomc.services.CategoriaService;
 @RestController
 @RequestMapping(value="/categorias")
 public class CategoriaResource {
-	
+	//TODO não entendi! O pacote está com nome errado
+	// com.nelioavels.cursomc.resources.domain na aula está com.nelioavels.cursomc.resources.domain 
 	@Autowired
 	private CategoriaService service;
 
