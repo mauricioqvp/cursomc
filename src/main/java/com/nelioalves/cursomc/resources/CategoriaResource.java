@@ -1,7 +1,7 @@
 package com.nelioalves.cursomc.resources;
 
-import java.util.ArrayList;
-import java.util.List;
+/*import java.util.ArrayList;
+import java.util.List;*/
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +18,7 @@ import com.nelioalves.cursomc.services.CategoriaService;
 public class CategoriaResource {
 	//TODO não entendi! O pacote está com nome errado
 	// com.nelioavels.cursomc.resources.domain na aula está com.nelioavels.cursomc.resources.domain 
+	
 	@Autowired
 	private CategoriaService service;
 
@@ -27,7 +28,8 @@ public class CategoriaResource {
 		// no pdf o professor chama BUSCAR de FIND e eu atualizei p FIND
 		// em todo o resto da aplicação, terá que ser usando FIND
 		// este método está implementado no CategoriaService (linha 14)
-		Categoria obj = service.find(id);
+		
+			Categoria obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 		
 		/*
