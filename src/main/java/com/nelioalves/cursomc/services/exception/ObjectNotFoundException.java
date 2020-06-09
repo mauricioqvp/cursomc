@@ -1,4 +1,4 @@
-package com.nelioalves.cursomc.services.exceptions;
+package com.nelioalves.cursomc.services.exception;
 
 public class ObjectNotFoundException extends RuntimeException{
 	private static final long serialVersionUID = 1L;
