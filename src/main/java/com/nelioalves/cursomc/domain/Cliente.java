@@ -36,17 +36,20 @@ public class Cliente implements Serializable{
 	@ElementCollection
 	@CollectionTable(name="TELEFONE")
 	private Set<String> telefones = new HashSet<>();
+	
+	@OneToMany(mappedBy="cliente")
+	private List<Pedido> pedidos = new ArrayList<>();
 
 	public Cliente() {
 		super();
 	}
 
-	public Cliente(Integer id, String nome, String email, String cpfOucnpj, TipoCliente tipo) {
+	public Cliente(Integer id, String nome, String email, String cpfOuCnpj, TipoCliente tipo) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
-		this.cpfOuCnpj = cpfOucnpj;
+		this.cpfOuCnpj = cpfOuCnpj;
 		this.tipo = tipo.getCod();
 	}
 
@@ -74,11 +77,11 @@ public class Cliente implements Serializable{
 		this.email = email;
 	}
 
-	public String getCpfOucnpj() {
+	public String getCpfOuCnpj() {
 		return cpfOuCnpj;
 	}
 
-	public void setCpfOucnpj(String cpfOucnpj) {
+	public void setCpfOuCnpj(String cpfOucnpj) {
 		this.cpfOuCnpj = cpfOucnpj;
 	}
 
@@ -106,6 +109,14 @@ public class Cliente implements Serializable{
 		this.telefones = telefones;
 	}
 
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+	
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -130,6 +141,4 @@ public class Cliente implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
 }
